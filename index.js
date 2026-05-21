@@ -7,6 +7,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root route for health check
+app.get('/', (req, res) => {
+    res.send('WebnestMail API is running and ready to send emails!');
+});
+
 // SMTP transporter using Gmail
 const transporter = nodemailer.createTransport({
     service: 'gmail',
