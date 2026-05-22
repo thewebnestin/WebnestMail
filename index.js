@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-const { contactRateLimiter, validateContactRequest } = require('./middleware');
+const { contactRateLimiter, validateContactRequest } = require('./middlewares');
 const { getClientConfirmationEmail, getAdminNotificationEmail } = require('./templates');
 
 // Validate environment variables on startup
