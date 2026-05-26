@@ -6,7 +6,7 @@ const rateLimit = require('express-rate-limit');
  */
 const contactRateLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // Limit each IP to 5 contact form submissions per windowMs
+  max: 50, // Increased limit for testing (50 requests per 15 minutes)
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
   message: {

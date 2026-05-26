@@ -1,5 +1,5 @@
 /**
- * Email templates for WebnestMail service
+ * Email templates for XplodeMail service
  */
 
 /**
@@ -16,7 +16,7 @@ function getClientConfirmationEmail(name) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You - Webnest</title>
+  <title>Thank You - Xplode</title>
   <style>
     body {
       margin: 0;
@@ -260,12 +260,12 @@ function getClientConfirmationEmail(name) {
 
           <!-- Button -->
           <div class="btn-container">
-            <a href="https://webnest-app.vercel.app" target="_blank" class="btn">Visit Webnest Site</a>
+            <a href="https://xplode.in" target="_blank" class="btn">Visit Xplode Site</a>
           </div>
 
           <!-- Footer -->
           <div class="footer">
-            <p>© 2026 Webnest. All rights reserved.</p>
+            <p>© 2026 Xplode. All rights reserved.</p>
             <p>You received this email because you submitted a contact request on our website.</p>
           </div>
 
@@ -431,14 +431,14 @@ function getAdminNotificationEmail(name, email, phone, message) {
     <table class="main-table" role="presentation">
       <tr>
         <td class="header">
-          <h1 class="header-title">Webnest</h1>
+          <h1 class="header-title">Xplode</h1>
           <p class="header-subtitle">New Form Submission</p>
         </td>
       </tr>
       <tr>
         <td class="content-padding">
           <p class="intro-text">
-            Hello Team, you have received a new contact message through the Webnest website contact form.
+            Hello Team, you have received a new contact message through the Xplode website contact form.
           </p>
 
           <table role="presentation" class="info-table">
@@ -467,7 +467,7 @@ function getAdminNotificationEmail(name, email, phone, message) {
           </div>
 
           <div class="footer">
-            <p>This notification was automatically sent by the WebnestMail API service.</p>
+            <p>This notification was automatically sent by the XplodeMail API service.</p>
           </div>
         </td>
       </tr>

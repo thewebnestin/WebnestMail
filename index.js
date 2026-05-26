@@ -24,7 +24,7 @@ app.use(express.json({ limit: '10kb' })); // Limit body size to prevent abuse
 
 // Root route for health check
 app.get('/', (req, res) => {
-  res.status(200).send('WebnestMail API is running and ready to send emails!');
+  res.status(200).send('XplodeMail API is running and ready to send emails!');
 });
 
 // SMTP transporter using Gmail
@@ -52,7 +52,7 @@ app.post('/contact', contactRateLimiter, validateContactRequest, async (req, res
   try {
     // Send Admin Notification (Critical: determines success of the API request)
     await transporter.sendMail({
-      from: `"Webnest Lead Alert" <${process.env.GMAIL_USER}>`,
+      from: `"Xplode Lead Alert" <${process.env.GMAIL_USER}>`,
       to: process.env.ADMIN_EMAIL,
       replyTo: email,
       subject: `New Lead: Contact Message from ${name}`,
@@ -63,9 +63,9 @@ app.post('/contact', contactRateLimiter, validateContactRequest, async (req, res
 
     // Send Client Confirmation (Non-Critical auto-reply: fails gracefully)
     transporter.sendMail({
-      from: `"Webnest Support" <${process.env.GMAIL_USER}>`,
+      from: `"Xplode Support" <${process.env.GMAIL_USER}>`,
       to: email,
-      subject: 'Thank you for reaching out to Webnest!',
+      subject: 'Thank you for reaching out to Xplode!',
       html: getClientConfirmationEmail(name)
     }).then(() => {
       console.log(`[${new Date().toISOString()}] Client confirmation email sent successfully to ${email}`);
